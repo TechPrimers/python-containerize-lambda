@@ -17,3 +17,6 @@ docker push 445784402811.dkr.ecr.us-east-1.amazonaws.com/python-containerize:v1
 - Upload the file to S3 bucket
 
 `aws s3 cp tp-data.txt s3://tp-data-bucket/tp-data.txt`
+
+## Architecture
+![Architecture](./architecture.png)
