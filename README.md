@@ -12,6 +12,7 @@ docker tag python-containerize:v1 <account_id>.dkr.ecr.us-east-1.amazonaws.com/p
 - Create ECR repository and Push the image
 ```
 aws ecr create-repository --repository-name python-containerize --image-scanning-configuration scanOnPush=true --region us-east-1
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <account_id>.dkr.ecr.us-east-1.amazonaws.com
 docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/python-containerize:v1
 ```
 - Upload the file to S3 bucket
